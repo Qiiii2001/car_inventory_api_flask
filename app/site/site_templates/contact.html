@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5 mb-5">
+    <h2>Contact Us</h2>
+    <p>If you have any questions or need further information, please feel free to contact us.</p>
+    <form id="contactForm" action="#" method="post">
+        <div class="mb-3">
+            <label for="nameInput" class="form-label">Name</label>
+            <input type="text" class="form-control" id="nameInput" name="name" placeholder="Your Name" required>
+        </div>
+        <div class="mb-3">
+            <label for="emailInput" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="emailInput" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="messageTextarea" class="form-label">Message</label>
+            <textarea class="form-control" id="messageTextarea" name="message" rows="3" required></textarea>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Send Message</button>
+        </div>
+    </form>
+</div>
+{% endblock %}
