@@ -102,3 +102,13 @@ def search():
     else:
         results = []
     return render_template('search_results.html', query=query, results=results)
+
+@site.route('/contact_submit', methods=['POST'])
+def contact_submit():
+    name = request.form.get('name')
+    email = request.form.get('email')
+    message = request.form.get('message')
+    
+    flash('Thank you for your message, we will get back to you shortly.')
+    
+    return redirect(url_for('site.home'))
